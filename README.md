@@ -4,10 +4,9 @@
 
 **ES6 Usage Example (it will be updated as soon as possible.)**
 ```javascript
-// RequestErrors and RequestErrorMessages will coming soon
 
 // Requests file : Create it once for always use :)
-**Requests.js**
+// **Requests.js**
 const BASE_URL = "https://taluttasgiran.com.tr/api/v2/"
 const Methods = {
     POST: "POST",
@@ -28,7 +27,9 @@ const Requests = {
        headers: { "Content-Type": "application/json" } // not required
     }
 }
-
+```
+```javascript
+// RequestErrors and RequestErrorMessages will coming soon
 // USAGE
 import RequestManager from 'javascript-request-manager'
 import {RequestRoutes,BASE_URL, Requests, Methods} from './Requests'
