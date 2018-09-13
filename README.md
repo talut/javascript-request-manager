@@ -10,7 +10,7 @@
 
 // Requests file : Create it once for always use :)
 **Requests.js**
-
+const BASE_URL = "https://taluttasgiran.com.tr/api/v2/"
 const Methods = {
     POST: "POST",
     GET: "GET",
@@ -33,11 +33,12 @@ const Requests = {
 
 // USAGE
 import RequestManager from 'javascript-request-manager'
+import {RequestRoutes,BASE_URL, Requests, Methods} from './Requests'
 
-const RManager = RequestManager(RequestErrors, RequestErrorMessages);
+const RManager = new RequestManager(RequestErrors, RequestErrorMessages);
 
 RManager
-    .baseURL('https://taluttasgiran.com.tr/')
+    .baseURL(BASE_URL)
     .Body({email:"info@taluttasgiran.com.tr",password:"123456"})
     .Builder(Requests.MOBILE_LOGIN)
     .onSuccess((res)=>{
