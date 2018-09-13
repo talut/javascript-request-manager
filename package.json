@@ -1,0 +1,41 @@
+{
+  "name": "javascript-request-manager",
+  "version": "0.0.1",
+  "description": "Request Manager for JavaScript | Handle your requests easily",
+  "main": "./dist/index.js",
+  "scripts": {
+    "watch": "babel ./src --watch --experimental --source-maps-inline -d ./dist",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talut/javascript-request-manager.git"
+  },
+  "keywords": [
+    "javascript",
+    "reqeust",
+    "manager",
+    "rmanager",
+    "request",
+    "manager",
+    "handle",
+    "request",
+    "request",
+    "handler"
+  ],
+  "author": "Talut Tasgiran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talut/javascript-request-manager/issues"
+  },
+  "homepage": "https://github.com/talut/javascript-request-manager#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
