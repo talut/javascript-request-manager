@@ -9,11 +9,11 @@ export default class RequestManager {
             this.BASE_URL = baseURL;
             return this;
         };
-        this.Body = (body) => {
+        this.body = (body) => {
             this.params = body;
             return this;
         };
-        this.Builder = (req) => {
+        this.builder = (req) => {
             this.request = req;
             return this;
         };

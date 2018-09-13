@@ -1,8 +1,6 @@
-# Javascript Request Manager
+# Javascript Request Manager (with Axios)
 
 ### Cooming Soon
-
-
 
 **ES6 Usage Example (it will be updated as soon as possible.)**
 ```javascript
@@ -39,8 +37,8 @@ const RManager = new RequestManager(RequestErrors, RequestErrorMessages);
 
 RManager
     .baseURL(BASE_URL)
-    .Body({email:"info@taluttasgiran.com.tr",password:"123456"})
-    .Builder(Requests.MOBILE_LOGIN)
+    .body({email:"info@taluttasgiran.com.tr",password:"123456"}) // post body or get params
+    .builder(Requests.MOBILE_LOGIN)
     .onSuccess((res)=>{
         console.log(res)
     })
