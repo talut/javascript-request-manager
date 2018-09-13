@@ -5,17 +5,41 @@
 
 
 **ES6 Usage Example (it will be updated as soon as possible.)**
-```ecmascript 6
-RManager
-    .baseURL('https://taluttasgiran.com.tr/')
-    .Body({email:"info@taluttasgiran.com.tr",password:"123456"})
-    .Builder({
-       route: "Mobile/Auth",
-       method: "POST",
+```javascript
+// RequestErrors and RequestErrorMessages will coming soon
+
+// Requests file : Create it once for always use :)
+**Requests.js**
+
+const Methods = {
+    POST: "POST",
+    GET: "GET",
+    PUT: "PUT",
+    DELETE: "DELETE"
+}
+const RequestRoutes = {
+    MOBILE_LOGIN: "Mobile/Auth",
+    MOBILE_POSTS: "Mobile/Posts",
+}
+const Requests = {
+    MOBILE_LOGIN: {
+       route: RequestRoutes.MOBILE_LOGIN,
+       method: Methods.POST,
        showRefreshComponent: true, // not required // this for ReactJS component :)
        isTokenRequired: true, // not required
        headers: { "Content-Type": "application/json" } // not required
-    })
+    }
+}
+
+// USAGE
+import RequestManager from 'javascript-request-manager'
+
+const RManager = RequestManager(RequestErrors, RequestErrorMessages);
+
+RManager
+    .baseURL('https://taluttasgiran.com.tr/')
+    .Body({email:"info@taluttasgiran.com.tr",password:"123456"})
+    .Builder(Requests.MOBILE_LOGIN)
     .onSuccess((res)=>{
         console.log(res)
     })
