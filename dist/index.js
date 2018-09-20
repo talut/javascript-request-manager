@@ -15,19 +15,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RequestManager = function () {
-  function RequestManager(token, requestErrors, requestErrorMessages) {
+  function RequestManager(requestErrors, requestErrorMessages) {
     var _this = this;
 
     _classCallCheck(this, RequestManager);
 
-    this.token = token;
     this.requestErrors = requestErrors;
     this.requestErrorMessages = requestErrorMessages;
-    this.Body = function (body) {
+    this.baseURL = function (baseURL) {
+      _this.BASE_URL = baseURL;
+      return _this;
+    };
+    this.body = function (body) {
       _this.params = body;
       return _this;
     };
-    this.Builder = function (req) {
+    this.setToken = function (token) {
+      _this.token = token;
+      return _this;
+    };
+    this.builder = function (req) {
       _this.request = req;
       return _this;
     };
@@ -49,7 +56,7 @@ var RequestManager = function () {
     value: function makeARequest() {
       var _this2 = this;
 
-      var url = this.request.baseURL + this.request.serviceURL;
+      var url = this.BASE_URL + this.request.serviceURL;
       var header = Object.assign(this.request.headers !== undefined ? this.request.headers : {}, { token: this.request.isTokenRequired ? this.token : null });
       switch (this.request.method) {
         case "POST":

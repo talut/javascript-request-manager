@@ -31,7 +31,7 @@ const Requests = {
 ```javascript
 // USAGE
 import RequestManager from 'javascript-request-manager'
-import {RequestRoutes,BASE_URL, Requests, Methods} from './Requests'
+import {BASE_URL, Requests} from './Requests'
 
 const RManager = new RequestManager(RequestErrors, RequestErrorMessages);
 const token = "abcdefghi14334dfsdfsdf3243esd"
