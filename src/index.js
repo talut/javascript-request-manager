@@ -34,8 +34,8 @@ export default class RequestManager {
   }
 
   makeARequest() {
-    const url = this.BASE_URL + this.request.serviceURL;
-    let header = Object.assign(this.request.headers !== undefined ? this.request.headers : {}, { token: this.request.isTokenRequired ? this.token : null });
+    const url = this.BASE_URL + this.request.route;
+    let header = Object.assign(this.request.headers !== undefined ? this.request.headers : {}, { token: this.request.isTokenRequired ? this.token : undefined });
     switch (this.request.method) {
       case "POST": {
         return axios.post(url, this.params, {

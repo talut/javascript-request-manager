@@ -56,8 +56,8 @@ var RequestManager = function () {
     value: function makeARequest() {
       var _this2 = this;
 
-      var url = this.BASE_URL + this.request.serviceURL;
-      var header = Object.assign(this.request.headers !== undefined ? this.request.headers : {}, { token: this.request.isTokenRequired ? this.token : null });
+      var url = this.BASE_URL + this.request.route;
+      var header = Object.assign(this.request.headers !== undefined ? this.request.headers : {}, { token: this.request.isTokenRequired ? this.token : undefined });
       switch (this.request.method) {
         case "POST":
           {
