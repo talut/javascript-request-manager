@@ -1,6 +1,15 @@
 # Javascript Request Manager (with Axios)
 
-### Cooming Soon
+### Installation
+
+*Install with _npm_*
+```
+npm install --save javascript-request-manager
+```
+*Install with _yarn_*
+```
+yarn add javascript-request-manager
+```
 
 **ES6 Usage Example (it will be updated as soon as possible.)**
 ```javascript
